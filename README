@@ -1,0 +1,37 @@
+https://github.com/wklken/k-vim
+
+
+cd vim_golang_python/
+sh -x install.sh
+
+编辑vimrc.bundles中
+
+" more options: ['json', 'nginx', 'golang', 'ruby', 'less', 'json', ]
+let g:bundle_groups=['python', 'javascript', 'markdown', 'html', 'css', 'tmux', 'beta']"
+
+
+:PlugInstall
+
+
+编译 YouCompleteMe
+
+首先说明，编译过程需要 CMake ，可以使用 brew 来安装。
+
+bash
+brew install CMake
+带 C-family languages 语义支持的版本
+bash
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer
+不带 C-family languages 语义支持的版本
+bash
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer
+带 C# 语义支持的版本
+bash
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --omnisharp-completer
+带 Go 语言语义支持的版本
+bash
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --gocode-completer
